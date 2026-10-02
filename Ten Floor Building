@@ -4,7 +4,6 @@ and each chooses a floor at random to get out, independently of the others,
 at how many floors do you expect the elevator to make a stop to let out one or more of these 12 people?
 """
 
-from collections import Counter
 import random
 
 trials = 100000
