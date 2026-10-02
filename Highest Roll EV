@@ -1,0 +1,22 @@
+"""
+Jim will roll a fair, six-sided die until he gets a 4. 
+What is the expected value of the highest number he rolls through this process?
+"""
+
+import random
+trials = 100000
+rolls = []
+list_of_highest_rolls = []
+for i in range(trials):
+    random1 = random.randint(1, 6)
+    while random1 != 4:
+        rolls.append(random1)
+        random1 = random.randint(1, 6)
+    if random1 == 4:
+        rolls.append(4)
+    list_of_highest_rolls.append(max(rolls))
+    rolls = []
+sum_of_highest_rolls = sum(list_of_highest_rolls)
+print(sum_of_highest_rolls / len(list_of_highest_rolls))
+
+
