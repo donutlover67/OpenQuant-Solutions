@@ -1,0 +1,17 @@
+import random
+trials = 10000
+skipped_trials = 0
+total_count = 0
+for _ in range(trials):
+    count = 0
+    num = random.randint(1, 6)
+    while num == 1:
+        count += 1
+        num = random.randint(1, 6)
+    if num == 5:
+        skipped_trials += 1
+    if num == 6:
+        count += 1 + count
+        total_count += count
+result = total_count / (trials - skipped_trials)
+print(result)
