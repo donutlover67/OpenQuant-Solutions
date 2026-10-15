@@ -10,6 +10,7 @@ for _ in range(trials):
         num = random.randint(1, 6)
     if num == 5:
         skipped_trials += 1
+        count
     if num == 6:
         count += 1 + count
         total_count += count
