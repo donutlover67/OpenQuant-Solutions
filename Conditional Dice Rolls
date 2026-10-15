@@ -13,5 +13,6 @@ for _ in range(trials):
     if num == 6:
         count += 1 + count
         total_count += count
+        continue
 result = total_count / (trials - skipped_trials)
 print(result)
