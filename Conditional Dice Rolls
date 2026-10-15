@@ -5,15 +5,13 @@ total_count = 0
 for _ in range(trials):
     count = 0
     num = random.randint(1, 6)
-    while num == 1:
+    while num == 4 or num == 3 or num == 2 or num == 1:
         count += 1
         num = random.randint(1, 6)
     if num == 5:
         skipped_trials += 1
-        count
     if num == 6:
-        count += 1 + count
+        count = 1 + count
         total_count += count
-        continue
 result = total_count / (trials - skipped_trials)
 print(result)
