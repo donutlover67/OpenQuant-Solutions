@@ -1,3 +1,5 @@
+"What is the expected number of rolls it takes to see a six given you did not roll a 5?"
+
 import random
 trials = 10000
 skipped_trials = 0
