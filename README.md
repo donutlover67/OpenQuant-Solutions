@@ -1,2 +1,2 @@
 # OpenQuant-Solutions
-Independent Practice with Online Brain Teaser Questions
+Python Practice with Online Probability Questions
