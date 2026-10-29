@@ -1,0 +1,20 @@
+"""
+A building has 10 floors above the basement. If 12 people get into an elevator at the basement, 
+and each chooses a floor at random to get out, independently of the others, 
+at how many floors do you expect the elevator to make a stop to let out one or more of these 12 people?
+"""
+
+from collections import Counter
+import random
+
+trials = 100000
+total_length = 0
+for i in range(trials):
+    list = []
+    for j in range(12):
+        number = random.randint(1, 10)
+        list.append(number)
+    list = set(list)
+    list_lenth = len(list)
+    total_length += list_lenth
+print(total_length / trials)

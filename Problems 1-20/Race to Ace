@@ -1,0 +1,13 @@
+"""What is the expected number of cards you need to draw from a 52-card deck before you see the first ace?"""
+
+import random
+
+trials = 100000
+total_count = 0
+deck = [1] * 4 + [0] * 48
+for i in range(trials):
+    random.shuffle(deck)
+    count = deck.index(1)
+    total_count += count
+print(1 + (total_count / trials))
+    
