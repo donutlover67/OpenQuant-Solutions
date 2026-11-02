@@ -15,7 +15,8 @@ class Particle:
     def __repr__(self):
         return (f"Particle(x = {self.positionx}, y = {self.positiony})")
 
-def collision
+def collision:
+    
     
     
 p = Particle(2, 0, 0, 3, 4)   # mass, x, y, vx, vy
