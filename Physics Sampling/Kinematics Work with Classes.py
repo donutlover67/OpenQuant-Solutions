@@ -16,7 +16,8 @@ class Particle:
         return (f"Particle(x = {self.positionx}, y = {self.positiony})")
 
 def collision:
-    
+    mass * velocityx = momentumx
+    mass * velocityy = momentumy
     
     
 p = Particle(2, 0, 0, 3, 4)   # mass, x, y, vx, vy
