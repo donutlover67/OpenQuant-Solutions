@@ -1,6 +1,13 @@
+"""You are shooting arrows at a target with three rings: there is a circle with 
+a 4 inch radius, a ring around it with an 8 inch radius, and a ring around that 
+with a 12 inch radius. Each arrow hits the target somewhere uniformly at random.
+
+What’s the probability that you land exactly one arrow in each of the 
+three rings?"""
+
 import random
 
-trials = 10000
+trials = 100000
 
 ring = 0
 successful_trials = 0
@@ -27,12 +34,7 @@ for i in range(trials):
                                     # print("Ring 3 is present")
                                     True
                                     successful_trials += 1
-        #                         else:
-        #                             break
-        #             else:
-        #                 break
-        # else:
-        #     break
+
         
 
 print(successful_trials / trials)
