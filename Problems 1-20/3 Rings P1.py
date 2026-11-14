@@ -6,8 +6,7 @@ ring = 0
 successful_trials = 0
 for i in range(trials):
     for i in range(3):
-        ring[i] = random.randint(1, 9)
-        rings += ring[i]
+        rings  += [random.randint(1, 10)]
 
 
     if not True:
@@ -15,14 +14,21 @@ for i in range(trials):
     for i in range(len(rings)):
         if rings[i] == 1:
             True
-        if True:
-            for i in range(len(rings)):
-                if 1 < rings[i] < 5:
-                    True
-                if True:
-                    for i in range(len(rings)):
-                        if rings[i] > 5:
-                            succesful_trials += 1
+            if True:
+                for i in range(len(rings)):
+                    if 1 < rings[i] < 5:
+                        True
+                        if True:
+                            for i in range(len(rings)):
+                                if rings[i] > 5:
+                                    successful_trials += 1
+                                else:
+                                    break
+                    else:
+                        break
+        else:
+            break
+        
 
 print(successful_trials / trials)
     
