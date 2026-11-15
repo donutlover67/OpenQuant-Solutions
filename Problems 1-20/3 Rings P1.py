@@ -8,8 +8,6 @@ three rings?"""
 import random
 
 trials = 100000
-
-ring = 0
 successful_trials = 0
 for i in range(trials):
     rings = []
