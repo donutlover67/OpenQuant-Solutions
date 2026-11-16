@@ -10,13 +10,13 @@ def draw():
     result = np.random.choice([1, 2, 3], p = [1/3, 1/3, 1/3])
     return result
 
-trials = 10000
+trials = 100000
 Draw = []
 success = []
 
 
 
-for i in range(3):
+for i in range(trials):
     coin = draw()
     if coin == 1:
         Draw = []
@@ -43,9 +43,3 @@ for i in range(3):
 
 
 print(sum(success) / len(success))
-# if coin == 1:
-#     print(sum(success1) / len(success1))
-# elif coin == 2:
-#     print(sum(success2) / len(success2))
-# else:
-#     print(sum(success3) / len(success3))
