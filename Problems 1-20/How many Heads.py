@@ -11,34 +11,41 @@ def draw():
     return result
 
 trials = 10000
-draw1 = []
-draw2 = []
-draw3 = []
-success1 = 0
-success2 = 0
-success3 = 0
+Draw = []
+success = []
 
-for i in range(trials):
+
+
+for i in range(3):
     coin = draw()
     if coin == 1:
+        Draw = []
         for j in range(14):
-            draw1 += [np.random.choice([0, 1], p = [2/3, 1/3])]
-        if draw1[0] == 1 and draw1[1] == 1:
-            success1 += 1
-    elif coin == 2:
-        for j in range(14):
-            draw2 += [np.random.choice([0, 1], p = [1/3, 2/3])]
-        if draw2[0] == 1 and draw2[1] == 1:
-            success2 += 1
-    elif coin == 3:
-        for j in range(14):
-            draw3 += [np.random.choice([0, 1], p = [0, 1])]
-        if draw3[0] == 1 and draw3[1] == 1:
-            success3 += 1
+            Draw += [int(np.random.choice([0, 1], p = [2/3, 1/3]))]
+        if Draw[0] == 1 and Draw[1] == 1:
+            success.append(Draw.count(1) - 2)
 
-if coin == 1:
-    print(success1 / trials)
-elif coin == 2:
-    print(success2 / trials)
-else:
-    print(success3 / trials)
+
+    elif coin == 2:
+        Draw = []
+        for j in range(14):
+            Draw += [np.random.choice([0, 1], p = [1/3, 2/3])]
+        if Draw[0] == 1 and Draw[1] == 1:
+            success.append(Draw.count(1) - 2)
+
+            
+    elif coin == 3:
+        Draw = []
+        for j in range(14):
+            Draw += [np.random.choice([0, 1], p = [0, 1])]
+        if Draw[0] == 1 and Draw[1] == 1:
+            success.append(Draw.count(1) - 2)
+
+
+print(sum(success) / len(success))
+# if coin == 1:
+#     print(sum(success1) / len(success1))
+# elif coin == 2:
+#     print(sum(success2) / len(success2))
+# else:
+#     print(sum(success3) / len(success3))
