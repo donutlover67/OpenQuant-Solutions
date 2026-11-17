@@ -19,8 +19,4 @@ for i in range(trials):
 print(successful_trials / trials)
 
 
-
-# for i in range(trials):
-#     while len(basket) > 0:
-#         basket.pop(random.randrange(len(basket)))
         
