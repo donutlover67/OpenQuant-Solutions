@@ -1,6 +1,6 @@
 import random
 
-trials = 10000
+trials = 200000
 success = 0
 
 def deck():
@@ -17,7 +17,6 @@ for i in range(trials):
     Deck = deck()
     picks = []
 
-
     for j in range(5):
         pick = random.randint(0, len(Deck) - 1)
         picked_card = Deck[pick]
@@ -30,12 +29,12 @@ for i in range(trials):
         picks1 += [item[1]]
 
     picks2 = list(set(picks1))
-    if len(picks2) == 2:
-        print(f"Sorted picks: {picks2}")
+
+    # I will sort the picks list and if theres only 2 unique values in the list
+    # and I know theres only one of them thats different, there has to be 4 of a kind.
 
     if len(picks2) == 2:
-        if picks.count(pick) == 4 or picks.count(pick) == 1:
+        if picks1.count(picks2[0]) == 4 or picks1.count(picks2[0]) == 1:
             success += 1
-print(success / trials)
-# I will sort the picks list and if theres only 2 unique values in the list
-# and I know theres only one of them thats different, there has to be 4 of a kind.
+
+print(f"{success / trials:.4%}")
